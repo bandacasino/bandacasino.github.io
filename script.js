@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const games = [
         { id: 1, name: "Gates of Olympus", provider: "Pragmatic", category: "slots", image: "image/1752687405755_320Volcanoes3.webp" },
-        { id: 2, name: "Sweet Bonanza", provider: "Pragmatic", category: "slots", image: "image/1753872681526_You20Piggy20On%20It1.webp" },
+        { id: 2, name: "Sweet Bonanza", provider: "Pragmatic", category: "slots", image: "image/Piggy.webp" },
         { id: 3, name: "Book of Dead", provider: "Play'n GO", category: "slots", image: "image/1769715461541_Pray20Six.webp" },
-        { id: 4, name: "Razor Shark", provider: "Push Gaming", category: "slots", image: "image/1771863115876_Mummy20Jewels%20100.webp" },
-        { id: 5, name: "Money Train 4", provider: "Relax", category: "new", image: "image/1773220606499_Big20Raceday%20Repeat.webp" },
-        { id: 6, name: "Roulette Live", provider: "Evolution", category: "live", image: "image/1773650626140_Eternal%20Duel.webp" },
+        { id: 4, name: "Razor Shark", provider: "Push Gaming", category: "slots", image: "image/Mummy.webp" },
+        { id: 5, name: "Money Train 4", provider: "Relax", category: "new", image: "image/Raceday.webp" },
+        { id: 6, name: "Roulette Live", provider: "Evolution", category: "live", image: "image/Eternal.webp" },
         { id: 7, name: "Blackjack VIP", provider: "Evolution", category: "live", image: "image/Floating+Dragon+Megaways.webp" },
         { id: 8, name: "Mega Wheel", provider: "Pragmatic", category: "live", image: "image/Princess+Suki.webp" },
         { id: 9, name: "Fruit Party", provider: "Pragmatic", category: "slots", image: "image/Santa+Mummy.webp" },
