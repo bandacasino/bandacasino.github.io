@@ -1,0 +1,92 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #171A24; 
+}
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #444; 
+}
+
+/* Utility Classes */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: rgba(35, 39, 50, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Game Card Hover Effects */
+.game-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+.game-card:hover .play-overlay {
+    opacity: 1;
+}
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Slider Transitions */
+.slide-enter {
+    opacity: 0;
+    transform: scale(1.05);
+}
+.slide-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+.slide-exit {
+    opacity: 1;
+}
+.slide-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+/* Gradient Text */
+.text-gradient {
+    background: linear-gradient(135deg, #FFB800 0%, #FF8C00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Loader */
+.loader {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-left-color: #FFB800;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
