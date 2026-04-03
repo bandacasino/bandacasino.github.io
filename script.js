@@ -53,6 +53,7 @@ let currentSlide = 0;
 const sliderContainer = document.getElementById('hero-slider');
 const indicatorsContainer = document.getElementById('slider-indicators');
 const totalSlides = banners.length;
+
 function initSlider() {
     banners.forEach((banner, index) => {
         const slide = document.createElement('div');
@@ -83,6 +84,7 @@ function updateSlider() {
         }
     });
 }
+
 function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider();
@@ -97,15 +99,24 @@ function goToSlide(index) {
     currentSlide = index;
     updateSlider();
 }
-
 let slideInterval = setInterval(nextSlide, 5000);
-sliderContainer.parentElement.addEventListener('mouseenter', () => clearInterval(slideInterval));
-sliderContainer.parentElement.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 5000));
+if (sliderContainer && sliderContainer.parentElement) {
+    sliderContainer.parentElement.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    sliderContainer.parentElement.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 5000));
+}
 
-document.getElementById('next-slide').addEventListener('click', nextSlide);
-document.getElementById('prev-slide').addEventListener('click', prevSlide);
+const nextBtn = document.getElementById('next-slide');
+const prevBtn = document.getElementById('prev-slide');
+if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 const gamesGrid = document.getElementById('games-grid');
+
 function renderGames(limit) {
+    if (!gamesGrid) {
+        console.error('Games grid element not found!');
+        return;
+    }
+    
     gamesGrid.innerHTML = '';
     const gamesToShow = games.slice(0, limit);
 
@@ -114,6 +125,7 @@ function renderGames(limit) {
         card.className = 'game-card group relative rounded-xl overflow-hidden bg-banda-card cursor-pointer border border-white/5';
         card.style.animation = `fadeIn 0.5s ease-out ${index * 0.05}s forwards`;
         card.style.opacity = '0'; 
+
         card.innerHTML = `
             <div class="aspect-[4/3] overflow-hidden relative">
                 <img src="${game.image}" alt="${game.name}" class="w-full h-full object-cover transition-transform duration-500">
@@ -133,13 +145,17 @@ function renderGames(limit) {
         `;
         gamesGrid.appendChild(card);
     });
+
     lucide.createIcons();
 }
 let currentGameLimit = 6;
 renderGames(currentGameLimit);
-document.getElementById('load-more-games').addEventListener('click', function() {
-    const btn = this;
-    btn.innerHTML = '<div class="loader mx-auto"></div>';
+
+const loadMoreBtn = document.getElementById('load-more-games');
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function() {
+        const btn = this;
+        btn.innerHTML = '<div class="loader mx-auto"></div>';
     
     setTimeout(() => {
         currentGameLimit += 6;
@@ -148,9 +164,11 @@ document.getElementById('load-more-games').addEventListener('click', function() 
             btn.style.display = 'none';
         }
         renderGames(currentGameLimit);
-        btn.innerHTML = 'Показать еще';
-    }, 600);
-});
+            btn.innerHTML = 'Показать еще';
+        }, 600);
+    });
+}
+
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
 const mobileMenu = document.getElementById('mobile-menu');
