@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Банда казино официальный сайт - вход в Banda casino и рабочее зеркало</title>
-    <meta name="description" content="Банда казино официальный сайт предоставляет экспертный обзор платформы и доступ к играм. Пройдите банда казино регистрация за 30 секунд. Используйте актуальное банда казино зеркало рабочее на сегодня для входа в кабинет. Профессиональный сервис в Banda casino онлайн.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda Casino | Банда казино</title>
+    <meta name="description" content="Banda Casino (Банда Казино) — официальный сайт топового онлайн-казино. Регистрируйся в банда казино онлайн и получай щедрые бонусы. Banda casino официальный сайт гарантирует быстрые выплаты и лицензионные слоты.">
     <meta name="robots" content="index, follow, noarchive">
     <meta name="yandex" content="noarchive">
-    <meta name="yandex-verification" content="2a70f099037db011" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
     <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
@@ -15,351 +14,415 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="tailwindcss.js"></script>
-    <link href="css2.css" rel="stylesheet">
+    <script src="lucide.min.js"></script>
+    <link rel="stylesheet" href="css3.css">    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Jost', 'sans-serif'],
+                    fontFamily: { 
+                        sans: ['Jost', 'sans-serif'] 
                     },
                     colors: {
-                        banda: {
-                            dark: '#171A24',
-                            darker: '#0F1117',
-                            card: '#232732',
-                            primary: '#FFB800',
-                            primaryHover: '#E5A500',
-                            accent: '#FF4D4D',
-                            text: '#F3F4F6',
-                            muted: '#9CA3AF'
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
+                        dark: '#1a1d26', 
+                        panel: '#242933',
+                        primary: '#e3242b', 
+                        accent: '#06b6d4',
                     }
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="style.css">
     <style>
-.game-card {
-    opacity: 1 !important;
-    display: block !important;
-}
-#hero-slider {
-    display: flex !important;
-}
-</style>
+        * { 
+            font-family: 'Jost', sans-serif; 
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.02em; 
+        }
+        body { background-color: #1a1d26; color: #ffffff; overflow-x: hidden; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        @media (min-width: 1024px) {
+            body { background: radial-gradient(circle at 50% -20%, #1e2638 0%, #1a1d26 60%); }
+        }
+        .banner-gradient {
+            background: linear-gradient(90deg, #242933 30%, rgba(36, 41, 51, 0.4) 100%);
+        }        
+        .game-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .game-card:hover { transform: translateY(-5px); }        
+        .banner-slide { transition: opacity 0.8s ease-in-out; }
+        h1, h2, h3, .font-black {
+            font-weight: 900 !important;
+            text-transform: uppercase;
+            letter-spacing: -0.05em !important; 
+        }
+    </style>
 </head>
-<body class="bg-banda-dark text-banda-text antialiased overflow-x-hidden">
-<header class="fixed top-0 left-0 right-0 z-50 bg-banda-dark/95 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="header">
-    <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-2 group">
-            <img src="image/babda.png" alt="Banda Casino Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-cover transform group-hover:rotate-6 transition-transform">
-            <span class="text-xl sm:text-2xl font-bold tracking-tight hidden xs:block">BANDA</span>
-        </a>
-        <div class="flex lg:hidden items-center gap-2 ml-auto mr-2">
-            <button class="px-3 py-1.5 rounded-lg border border-white/10 hover:bg-white/5 transition-all font-medium text-[12px]">
-                Вход
-            </button>
-            <button class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-banda-primary to-orange-600 text-banda-darker font-bold text-[12px] shadow-lg shadow-orange-500/20">
-                Регистрация
-            </button>
+<body class="antialiased pb-24 lg:pb-0">
+    <aside class="fixed left-0 top-0 bottom-0 w-16 bg-[#161923] border-r border-white/5 flex flex-col items-center py-6 gap-6 z-50 hidden lg:flex">
+        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20 cursor-pointer">
+            <span class="text-xl font-black text-white">B</span>
         </div>
-        <nav class="hidden lg:flex items-center gap-8">
-            <a href="#games" class="text-sm font-medium hover:text-banda-primary transition-colors relative group">Игры</a>
-            <a href="#bonuses" class="text-sm font-medium hover:text-banda-primary transition-colors relative group">Бонусы</a>
-            <a href="#tournaments" class="text-sm font-medium hover:text-banda-primary transition-colors relative group">Турниры</a>
-            <a href="#vip" class="text-sm font-medium text-banda-primary flex items-center gap-1"><i data-lucide="crown" class="w-4 h-4"></i>VIP</a>
-        </nav>
-        <div class="hidden lg:flex items-center gap-4">
-            <button class="px-5 py-2.5 rounded-lg border border-white/10 hover:bg-white/5 transition-all font-medium text-sm">Вход</button>
-            <button class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-banda-primary to-orange-600 text-banda-darker font-bold text-sm hover:shadow-lg transition-all">Регистрация</button>
+        <button class="p-2 text-gray-500 hover:text-white transition-colors"><i data-lucide="layout-grid"></i></button>
+        <button class="p-2 text-gray-500 hover:text-white transition-colors"><i data-lucide="search"></i></button>
+        <button class="p-2 text-gray-500 hover:text-white transition-colors"><i data-lucide="gift"></i></button>
+        <button class="p-2 text-gray-500 hover:text-white transition-colors"><i data-lucide="trophy"></i></button>
+        <button class="mt-auto p-2 text-gray-500 hover:text-white"><i data-lucide="help-circle"></i></button>
+    </aside>
+    <header class="fixed top-0 left-0 lg:left-16 right-0 h-16 bg-dark/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-b lg:border-none border-white/5 z-40 px-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <a href="/" class="lg:hidden"><img src="babda.png" class="w-10 h-10 object-contain"></a>
+            <div class="hidden lg:flex gap-6 text-[11px] font-black uppercase tracking-widest">
+                <a href="#" class="text-accent border-b-2 border-accent pb-5 mt-1">Казино</a>
+                <a href="#" class="text-gray-400 hover:text-white pb-5 mt-1">Спорт</a>
+            </div>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-    </div>
-</header>
-    <main class="pt-20">
-        <section class="relative max-w-[1600px] mx-auto px-4 py-6 lg:py-10">
-            <div class="relative rounded-2xl overflow-hidden aspect-[16/7] md:aspect-[21/9] shadow-2xl shadow-black/50 border border-white/5 group">
-                <div id="hero-slider" class="flex transition-transform duration-500 ease-in-out h-full">
+        <div class="flex items-center gap-3">
+            <button class="px-5 py-1.5 rounded-xl border-2 border-primary text-white font-black text-sm">Вход</button>
+            <button class="hidden lg:block px-6 py-2 bg-gradient-to-r from-primary to-orange-600 rounded-lg text-xs font-black uppercase">Регистрация</button>
+        </div>
+    </header>
+    <main class="lg:ml-16 pt-16">
+        <section class="p-2 md:p-6 lg:p-8">
+            <div id="hero-slider" class="relative w-full h-[200px] md:h-[450px] rounded-3xl lg:rounded-4xl overflow-hidden bg-panel border border-white/5 group shadow-2xl">                
+                <div id="slider-container" class="h-full relative transition-transform duration-700">
+                    <div class="absolute inset-0 w-full h-full opacity-100 z-10 transition-opacity duration-1000 banner-slide bg-[#1a3a3a]">
+                        <img src="1728721451245_Welcome.png" class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0" onerror="this.src='https://placehold.co/800x400/1a3a3a/white?text=750FS+BANNER'">
+                        <div class="absolute inset-0 banner-gradient z-10 p-6 md:p-12 lg:px-20 flex flex-col justify-center">
+                            <h2 class="text-3xl md:text-6xl font-black text-white leading-tight mb-2">750ФС</h2>
+                            <p class="text-[10px] md:text-xl text-white/90 mb-4 font-medium">Вот это приветственный БОНУС!<br>Делай деп и активируй спины</p>
+                            <button class="w-fit px-8 py-3 bg-primary hover:bg-red-600 rounded-2xl text-[10px] md:text-sm font-black uppercase tracking-widest shadow-xl transition-all">Активировать</button>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 w-full h-full opacity-0 z-0 transition-opacity duration-1000 banner-slide bg-[#008b8b]">
+                        <img src="1728731135783_Wheel.png" class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0" onerror="this.src='https://placehold.co/800x400/008b8b/white?text=WHEEL+BANNER'">
+                        <div class="absolute inset-0 banner-gradient z-10 p-6 md:p-12 lg:px-20 flex flex-col justify-center">
+                            <h2 class="text-3xl md:text-6xl font-black text-white leading-tight mb-2">Колесо Фортуны</h2>
+                            <p class="text-[10px] md:text-xl text-white/90 mb-4 font-medium">Крути колесо каждый день<br>и получай бездепы</p>
+                            <button class="w-fit px-8 py-3 bg-primary hover:bg-red-600 rounded-2xl text-[10px] md:text-sm font-black uppercase tracking-widest shadow-xl transition-all">Крутить</button>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 w-full h-full opacity-0 z-0 transition-opacity duration-1000 banner-slide bg-[#d35400]">
+                        <img src="1758107613594_New_games.png" class="absolute inset-0 w-full h-full object-cover object-right lg:object-center z-0" onerror="this.src='https://placehold.co/800x400/d35400/white?text=NEW+GAMES+BANNER'">
+                        <div class="absolute inset-0 banner-gradient z-10 p-6 md:p-12 lg:px-20 flex flex-col justify-center">
+                            <h2 class="text-2xl md:text-6xl font-black text-white leading-tight mb-2 uppercase">Свежак на районе!</h2>
+                            <p class="text-[10px] md:text-xl text-white/90 mb-4 font-medium">Новые игры уже здесь!<br>Заходи и попробуй их первым</p>
+                            <button class="w-fit px-8 py-3 bg-primary hover:bg-red-600 rounded-2xl text-[10px] md:text-sm font-black uppercase tracking-widest shadow-xl transition-all">Играть</button>
+                        </div>
+                    </div>
                 </div>
-                <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-banda-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 disabled:opacity-20">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-banda-primary/90 text-white p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
-                <div id="slider-indicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div id="slider-dots" class="absolute bottom-4 left-6 lg:left-20 z-20 flex gap-2"></div>
+            </div>
+        </section>
+        <section class="flex gap-8 overflow-x-auto px-4 lg:px-8 py-3 opacity-30 grayscale no-scrollbar items-center justify-between lg:justify-center">
+            <img src="mastercard.svg" class="h-3 md:h-4 flex-shrink-0">
+            <img src="mir.svg" class="h-5 md:h-7 flex-shrink-0">
+            <img src="visa.svg" class="h-3 md:h-4 flex-shrink-0">
+            <span class="text-[10px] font-black text-white flex-shrink-0 tracking-tighter">Piastrix</span>
+            <img src="tether.svg" class="h-4 md:h-5 flex-shrink-0">
+            <img src="tron.svg" class="h-4 md:h-5 flex-shrink-0">
+            <img src="Ethereum_logo_2014.svg" class="h-4 md:h-5 flex-shrink-0">
+            <img src="PayPal.svg" class="h-4 md:h-5 flex-shrink-0">
+        </section>
+        <section class="px-4 lg:px-8 mt-4 space-y-3">
+            <div class="flex flex-col md:flex-row gap-3">
+                <div class="flex-1 bg-panel rounded-2xl flex items-center px-4 py-3 border border-white/5 focus-within:border-primary/50 transition-all">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-500 mr-3"></i>
+                    <input type="text" placeholder="Поиск игры..." class="bg-transparent text-sm outline-none w-full text-white placeholder-gray-500">
+                </div>
+                <div class="grid grid-cols-2 md:flex gap-2">
+                    <button class="bg-panel py-3 px-5 rounded-2xl border border-white/5 flex items-center justify-between gap-4 text-xs font-black text-gray-300 uppercase tracking-tighter hover:bg-gray-800 transition-colors">
+                        <span class="flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i> Провайдеры</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </button>
+                    <button class="bg-panel py-3 px-5 rounded-2xl border border-white/5 flex items-center justify-between gap-4 text-xs font-black text-gray-300 uppercase tracking-tighter hover:bg-gray-800 transition-colors">
+                        <span class="flex items-center gap-2"><i data-lucide="layout" class="w-4 h-4"></i> Все игры</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </button>
                 </div>
             </div>
         </section>
-        <section class="container mx-auto px-4 mb-8">
-            <div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
-                <button class="px-5 py-2 rounded-full bg-banda-primary text-banda-darker font-bold text-sm whitespace-nowrap">🔥 Все игры</button>
-                <button class="px-5 py-2 rounded-full bg-banda-card border border-white/5 hover:border-banda-primary/50 hover:text-banda-primary transition-colors text-sm whitespace-nowrap">🎰 Слоты</button>
-                <button class="px-5 py-2 rounded-full bg-banda-card border border-white/5 hover:border-banda-primary/50 hover:text-banda-primary transition-colors text-sm whitespace-nowrap">🃏 Live Казино</button>
-                <button class="px-5 py-2 rounded-full bg-banda-card border border-white/5 hover:border-banda-primary/50 hover:text-banda-primary transition-colors text-sm whitespace-nowrap">⚡ Быстрые игры</button>
-                <button class="px-5 py-2 rounded-full bg-banda-card border border-white/5 hover:border-banda-primary/50 hover:text-banda-primary transition-colors text-sm whitespace-nowrap">✨ Новинки</button>
-            </div>
-        </section>
-        <section id="games" class="container mx-auto px-4 mb-16">
-            <div class="flex items-end justify-between mb-6">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-bold mb-2">Топ Онлайн Слоты</h2>
-                    <p class="text-banda-muted text-sm">Лучшие игры, выбранные нашими игроками</p>
-                </div>
-                <a href="#" class="text-banda-primary hover:text-banda-primaryHover font-medium text-sm flex items-center gap-1">
-                    Все игры <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-            <div id="games-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <section class="mt-10 lg:mt-16">
+            <div class="px-4 lg:px-8 mb-5 flex items-center justify-between">
+                <h2 class="text-xl lg:text-3xl font-black">Сейчас выигрывают</h2>
+                <div class="h-[1px] flex-1 bg-white/5 mx-6 hidden md:block"></div>
+                <button class="text-[10px] font-black text-gray-500 uppercase tracking-widest hover:text-white">Live</button>
             </div>            
-            <div class="mt-8 text-center">
-                <button id="load-more-games" class="px-8 py-3 rounded-xl bg-banda-card border border-white/10 hover:border-banda-primary/50 text-sm font-medium transition-all">
-                    Показать еще
-                </button>
-            </div>
-        </section>
-        <section id="bonuses" class="bg-gradient-to-b from-banda-darker to-banda-dark py-16 border-y border-white/5">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-3">Бонусы и Акции</h2>
-                    <p class="text-banda-muted max-w-2xl mx-auto">Участвуй в турнирах, получай кэшбэк и забирай приветственные бонусы</p>
+            <div class="flex gap-4 overflow-x-auto px-4 lg:px-8 no-scrollbar pb-4">
+                <div class="flex-shrink-0 w-32 md:w-48 bg-panel/40 border border-white/5 rounded-3xl p-3 flex flex-col items-center shadow-xl hover:bg-panel/60 transition-all">
+                    <div class="relative w-full aspect-square rounded-2xl overflow-hidden mb-3">
+                        <img src="gatesofolympussuperscatter.webp" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                    </div>
+                    <span class="text-[9px] md:text-xs font-black text-gray-200 truncate w-full text-center">Gates of Olympus</span>
+                    <span class="text-[8px] md:text-[10px] text-gray-500 mb-1">user***</span>
+                    <span class="text-[11px] md:text-lg font-black text-[#22c55e]">1,428 ₽</span>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-banda-card rounded-2xl overflow-hidden border border-white/5 hover:border-banda-primary/30 transition-all hover:transform hover:-translate-y-1 group relative">
-                        <div class="h-40 overflow-hidden relative">
-                            <img src="image/1728721451245_Welcome.png" alt="Welcome Bonus" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-banda-card to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="inline-block px-3 py-1 rounded-full bg-banda-primary/20 text-banda-primary text-xs font-bold mb-3">Эксклюзив</div>
-                            <h3 class="text-xl font-bold mb-2">Приветственный Бонус</h3>
-                            <p class="text-banda-muted text-sm mb-4">Получи 750 ФС на первый депозит и удвой свой стартовый капитал!</p>
-                            <button class="w-full py-2.5 rounded-lg bg-banda-primary text-banda-darker font-bold text-sm hover:bg-banda-primaryHover transition-colors">
-                                Активировать
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-banda-card rounded-2xl overflow-hidden border border-white/5 hover:border-banda-primary/30 transition-all hover:transform hover:-translate-y-1 group relative">
-                        <div class="h-40 overflow-hidden relative">
-                            <img src="image/1728731135783_Wheel.png" alt="Fortune Wheel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-banda-card to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="inline-block px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-bold mb-3">Бесплатно</div>
-                            <h3 class="text-xl font-bold mb-2">Колесо Фортуны</h3>
-                            <p class="text-banda-muted text-sm mb-4">Крути колесо каждый день и получай бездепозитные бонусы!</p>
-                            <button class="w-full py-2.5 rounded-lg bg-banda-primary text-banda-darker font-bold text-sm hover:bg-banda-primaryHover transition-colors">
-                                Крутить
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-banda-card rounded-2xl overflow-hidden border border-white/5 hover:border-banda-primary/30 transition-all hover:transform hover:-translate-y-1 group relative md:col-span-2 lg:col-span-1">
-                        <div class="h-40 overflow-hidden relative">
-                            <img src="image/1773401746714_TGonWEB_NBANDA.png" alt="Telegram" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-banda-card to-transparent"></div>
-                        </div>
-                        <div class="p-6">
-                            <div class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold mb-3">Сообщество</div>
-                            <h3 class="text-xl font-bold mb-2">Канал BANDA в ТГ</h3>
-                            <p class="text-banda-muted text-sm mb-4">Бонусы, акции и раздачи — каждый день в нашем Telegram канале.</p>
-                            <button class="w-full py-2.5 rounded-lg bg-blue-500 text-white font-bold text-sm hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                                Подписаться
-                            </button>
-                        </div>
-                    </div>
+                <div class="flex-shrink-0 w-32 md:w-48 bg-panel/40 border border-white/5 rounded-3xl p-3 flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-3"><img src="sugarrush1.webp" class="w-full h-full object-cover"></div>
+                    <span class="text-[9px] md:text-xs font-black text-gray-200 truncate w-full text-center">Sugar Rush</span>
+                    <span class="text-[8px] md:text-[10px] text-gray-500 mb-1">Alex***</span>
+                    <span class="text-[11px] md:text-lg font-black text-[#22c55e]">5,200 ₽</span>
+                </div>
+                <div class="flex-shrink-0 w-32 md:w-48 bg-panel/40 border border-white/5 rounded-3xl p-3 flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-3"><img src="bigbasssecretsofthegoldenlake.webp" class="w-full h-full object-cover"></div>
+                    <span class="text-[9px] md:text-xs font-black text-gray-200 truncate w-full text-center">Big Bass</span>
+                    <span class="text-[8px] md:text-[10px] text-gray-500 mb-1">gv***</span>
+                    <span class="text-[11px] md:text-lg font-black text-[#22c55e]">890 ₽</span>
+                </div>
+                <div class="flex-shrink-0 w-32 md:w-48 bg-panel/40 border border-white/5 rounded-3xl p-3 flex flex-col items-center">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-3"><img src="sweetbonanza1000.webp" class="w-full h-full object-cover"></div>
+                    <span class="text-[9px] md:text-xs font-black text-gray-200 truncate w-full text-center">Sweet Bonanza</span>
+                    <span class="text-[8px] md:text-[10px] text-gray-500 mb-1">Mila***</span>
+                    <span class="text-[11px] md:text-lg font-black text-[#22c55e]">12,800 ₽</span>
                 </div>
             </div>
         </section>
-        <section class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-16 h-16 bg-banda-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 text-banda-primary">
-                        <i data-lucide="zap" class="w-8 h-8"></i>
+        <section class="mt-10 lg:mt-16">
+            <div class="px-4 lg:px-8 flex items-center justify-between mb-6">
+                <h2 class="text-xl lg:text-3xl font-black uppercase tracking-tight">Топ игры</h2>
+                <button class="bg-panel px-6 py-2 rounded-full text-[10px] font-black text-gray-400 hover:text-white transition-all uppercase tracking-widest border border-white/5">Все</button>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-5 px-4 lg:px-8">
+                <div class="game-card group relative bg-panel rounded-2xl lg:rounded-3xl overflow-hidden border border-white/5 cursor-pointer shadow-xl">
+                    <div class="aspect-square relative overflow-hidden">
+                        <img src="Treasures+of+Aztec.webp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/30 transform scale-50 group-hover:scale-100 transition-transform">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m7 3 14 9-14 9z"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Мгновенные выплаты</h3>
-                    <p class="text-banda-muted text-sm">Автоматическая обработка заявок на вывод 24/7 без задержек.</p>
-                </div>
-                <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-16 h-16 bg-banda-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 text-banda-primary">
-                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    <div class="p-3 text-center bg-panel">
+                        <h3 class="text-[10px] md:text-xs font-black uppercase leading-tight truncate">Striking Diamond 3</h3>
+                        <p class="text-[8px] md:text-[9px] text-gray-500 font-black uppercase mt-1">Fugaso</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Надежная безопасность</h3>
-                    <p class="text-banda-muted text-sm">Современные технологии шифрования и защита личных данных.</p>
                 </div>
-                <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-16 h-16 bg-banda-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 text-banda-primary">
-                        <i data-lucide="headphones" class="w-8 h-8"></i>
+                <div class="game-card group relative bg-panel rounded-2xl lg:rounded-3xl overflow-hidden border border-white/5 cursor-pointer shadow-xl">
+                    <div class="aspect-square relative overflow-hidden"><img src="Treasures+of+Aztec.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform"></div>
+                    <div class="p-3 text-center bg-panel">
+                        <h3 class="text-[10px] md:text-xs font-black uppercase truncate">Coin Blitz</h3>
+                        <p class="text-[8px] md:text-[9px] text-gray-500 font-black uppercase mt-1">Fugaso</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Поддержка 24/7</h3>
-                    <p class="text-banda-muted text-sm">Наша команда всегда готова помочь тебе с любым вопросом.</p>
                 </div>
+                <div class="hidden lg:block bg-panel/20 border border-dashed border-white/10 rounded-3xl aspect-[4/5]"></div>
+                <div class="hidden lg:block bg-panel/20 border border-dashed border-white/10 rounded-3xl aspect-[4/5]"></div>
+                <div class="hidden lg:block bg-panel/20 border border-dashed border-white/10 rounded-3xl aspect-[4/5]"></div>
+                <div class="hidden lg:block bg-panel/20 border border-dashed border-white/10 rounded-3xl aspect-[4/5]"></div>
             </div>
         </section>
-        <section id="tournaments" class="container mx-auto px-4 mb-16">
-            <div class="relative rounded-2xl overflow-hidden bg-banda-card border border-white/5">
-                <div class="absolute inset-0 z-0">
-                    <img src="image/1775227610378_GRAND%20EASTER%20HEIST%20Tournament%20%281%29.png" alt="Tournament" class="w-full h-full object-cover opacity-30">
-                </div>
-                <div class="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <div class="text-center md:text-left max-w-xl">
-                        <div class="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-yellow-600 to-yellow-400 text-black text-xs font-bold mb-4 animate-pulse-slow">
-                            🔥 АКТИВНЫЙ ТУРНИР
+        <section class="mt-12 lg:mt-20 px-4 lg:px-8">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xl lg:text-3xl font-black uppercase tracking-tight">Горячие игры</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-panel/40 border border-white/10 rounded-[2.5rem] p-5 flex flex-col gap-4 shadow-2xl hover:bg-panel/60 transition-all cursor-pointer group">
+                    <div class="flex gap-4 items-center">
+                        <div class="w-20 h-20 md:w-24 md:h-24 rounded-3xl overflow-hidden shadow-lg">
+                            <img src="Santa+Mummy.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4">500 000 €</h2>
-                        <h3 class="text-xl text-banda-primary mb-2">Пасхальный турнир от Endorphina!</h3>
-                        <p class="text-banda-muted mb-6">Испытай удачу и забери свою долю из огромного призового фонда.</p>
-                        <button class="px-8 py-3 rounded-xl bg-white text-banda-darker font-bold hover:bg-gray-200 transition-colors">
-                            Участвовать
-                        </button>
+                        <div class="flex-1">
+                            <h3 class="text-base md:text-xl font-black leading-tight uppercase">Return of the Dead</h3>
+                            <p class="text-[10px] md:text-xs text-gray-500 font-black uppercase tracking-widest mt-1">PragmaticPlay</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark/80 rounded-2xl p-3 flex items-center justify-center gap-3 border border-white/5">
+                        <span class="text-orange-500 animate-pulse">🔥</span>
+                        <span class="text-sm md:text-base font-black text-[#fbbf24] tracking-widest uppercase">RTP: 259.2%</span>
+                    </div>
+                </div>
+                <div class="bg-panel/40 border border-white/10 rounded-[2.5rem] p-5 flex flex-col gap-4 shadow-2xl">
+                    <div class="flex gap-4 items-center">
+                        <div class="w-20 h-20 md:w-24 md:h-24 rounded-3xl overflow-hidden shadow-lg"><img src="3472-1.jpg" class="w-full h-full object-cover"></div>
+                        <div class="flex-1">
+                            <h3 class="text-base md:text-xl font-black uppercase leading-tight">Bigger Bass Splash</h3>
+                            <p class="text-[10px] md:text-xs text-gray-500 font-black uppercase tracking-widest mt-1">PragmaticPlay</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark/80 rounded-2xl p-3 flex items-center justify-center gap-3 border border-white/5">
+                        <span class="text-orange-500 animate-pulse">🔥</span>
+                        <span class="text-sm md:text-base font-black text-[#fbbf24] tracking-widest uppercase">RTP: 128.7%</span>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-<section class="container mx-auto px-4 py-12">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-2xl font-bold mb-6 text-center">Banda casino официальный сайт - экспертный обзор и Банда казино регистрация</h1>
-        <div class="prose prose-invert prose-lg max-w-none text-banda-muted leading-relaxed space-y-4">
-            <h2>банда казино - лидерство в сегменте и социальная ответственность проекта</h2>
-            <p>банда казино на сегодняшний день является флагманской платформой в сфере международного цифрового гемблинга, обеспечивающей пользователям из стран СНГ доступ к инновационным игровым решениям. Наш проект банда казино ставит своей приоритетной задачей формирование прозрачной информационной среды, где каждый аспект взаимодействия клиента с банда казино детально регламентирован и понятен пользователю. В отличие от множества рыночных предложений, банда казино базируется на проприетарной архитектуре, которая проходит регулярные технические аудиты. Мы понимаем, что для современного игрока банда казино является не просто развлекательным порталом, а надежным финансовым инструментом. По правде говоря, интеграция передовых методов шифрования данных позволила банда казино свести любые риски несанкционированного доступа к минимуму. На самом деле, банда казино — это полноценная экосистема, где технологии будущего работают на интересы каждого игрока уже сегодня, обеспечивая банда казино статус лидера индустрии в СНГ. Репутация банда казино строится на доверии миллионов пользователей, выбирающих банда казино ежедневно.</p>
+        <section class="mt-12 px-4 lg:px-8">
+            <div class="relative w-full rounded-[3rem] bg-gradient-to-br from-[#022c22] to-[#064e3b] border border-emerald-500/30 overflow-hidden min-h-[220px] md:min-h-[300px] flex items-center p-8 md:p-16">
+                <div class="relative z-10 max-w-sm md:max-w-xl">
+                    <h2 class="text-4xl md:text-7xl font-black text-white leading-none mb-3">750ФС Бонус</h2>
+                    <p class="text-gray-200 text-sm md:text-2xl mb-8 font-medium opacity-90 leading-tight">Регистрируйся сейчас и <br class="hidden md:block"> получи приветственный бонус!</p>
+                    <button class="px-10 py-4 bg-[#10b981] hover:bg-emerald-400 rounded-2xl text-xs md:text-lg font-black text-white uppercase tracking-widest transition-all transform hover:scale-105 shadow-2xl shadow-emerald-500/40">
+                        Получить бонус
+                    </button>
+                </div>
+                <img src="Tournament.png" 
+                     class="absolute bottom-0 right-0 h-[110%] w-auto object-contain object-right z-0 pointer-events-none drop-shadow-[0_0_50px_rgba(0,0,0,0.5)] brightness-110">
+            </div>
+        </section>
+        <section class="mt-16 lg:mt-24 px-4 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl lg:text-4xl font-black uppercase tracking-tighter italic">Турниры</h2>
+                <button class="bg-panel px-6 py-2 rounded-full text-[10px] font-black text-gray-500 uppercase tracking-widest border border-white/5">Все</button>
+            </div>            
+            <div class="relative w-full rounded-[3rem] bg-[#1c212e] border border-white/5 overflow-hidden p-8 md:p-16 shadow-inner">
+                <img src="1775226802625_Banner_Tournament.webp" class="absolute -right-20 top-0 h-full w-auto object-contain opacity-30 md:opacity-100 z-0">                
+                <div class="relative z-10 max-w-md">
+                    <h3 class="text-4xl md:text-7xl font-black mb-8 italic tracking-tighter text-white drop-shadow-lg">Жёсткий Дастер</h3>                
+                    <div class="flex gap-10 mb-10">
+                        <div>
+                            <p class="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-2">Призовой фонд</p>
+                            <p class="text-2xl md:text-5xl font-black text-[#22c55e] tracking-tight">200 000 ₽</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-2">До конца</p>
+                            <div class="flex gap-3">
+                                <div class="text-xl md:text-3xl font-black text-white">02<span class="text-primary text-xs ml-1">д</span></div>
+                                <div class="text-xl md:text-3xl font-black text-white">03<span class="text-primary text-xs ml-1">ч</span></div>
+                                <div class="text-xl md:text-3xl font-black text-white">15<span class="text-primary text-xs ml-1">м</span></div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <button class="w-full md:w-fit px-16 py-5 bg-primary hover:bg-red-600 text-white font-black rounded-2xl uppercase tracking-[0.2em] shadow-2xl shadow-primary/40 transition-all transform hover:scale-105 active:scale-95">
+                        Участвовать
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="mt-12 px-4 lg:px-8">
+            <div class="bg-panel/30 border border-white/5 rounded-[2.5rem] p-5 md:p-10 shadow-2xl">
+                <div class="flex gap-8 border-b border-white/5 mb-8 overflow-x-auto no-scrollbar">
+                    <button class="pb-5 text-xs md:text-base font-black uppercase tracking-widest border-b-2 border-accent text-white whitespace-nowrap">Топ коэффициентов за 24 часа</button>
+                    <button class="pb-5 text-xs md:text-base font-black uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white whitespace-nowrap">Топ побед за 24 часа</button>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4">
+                    <div class="flex items-center justify-between p-4 bg-dark/40 rounded-2xl border border-white/5 hover:bg-dark/60 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <img src="burninghot.webp" class="w-12 h-12 rounded-xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+                            <div>
+                                <p class="text-xs md:text-sm font-black text-white mb-0.5">Chaos Crew II Mobile</p>
+                                <p class="text-[10px] text-gray-500 font-black uppercase tracking-tighter">банда хуе***</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs md:text-base font-black text-[#22c55e]">x3,840</p>
+                            <p class="text-[10px] text-gray-400 font-black">38,300.57 ₽</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-dark/40 rounded-2xl border border-white/5 hover:bg-dark/60 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <img src="endorphina2_sloteusgold.webp" class="w-12 h-12 rounded-xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+                            <div>
+                                <p class="text-xs md:text-sm font-black text-white mb-0.5">Sugar Rush Mobile</p>
+                                <p class="text-[10px] text-gray-500 font-black uppercase tracking-tighter">User:1050***</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs md:text-base font-black text-[#22c55e]">x1,374.85</p>
+                            <p class="text-[10px] text-gray-400 font-black">21,948.75 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-16 px-4 lg:px-8 mb-16">
+            <h1 class="text-3xl md:text-6xl font-black mb-8 tracking-tighter text-white">Официальный сайт Banda Casino</h1>
+            <div class="relative max-w-5xl">
+<div id="seo-text" class="text-sm md:text-lg text-gray-400 leading-relaxed space-y-6">
+    <h1>Banda casino официальный сайт - экспертный обзор сервисов и Банда казино регистрация</h1>
+    
+    <p><strong>Банда казино</strong> на сегодняшний день является флагманской платформой в индустрии лицензированного гемблинга на территории СНГ, обеспечивая пользователям беспрецедентный уровень кибербезопасности и стабильный доступ к игровым серверам. Наш проект <strong>Банда казино</strong> функционирует в строгом соответствии с международными регламентами, что гарантирует полную прозрачность всех финансовых операций и честность игровых алгоритмов. Администрация проекта уделяет колоссальное внимание технической поддержке, чтобы <strong>Банда казино</strong> оставался эталоном надежности в 2026 году. В отличие от множества рыночных предложений, <strong>Банда казино</strong> базируется на проприетарном программном обеспечении, которое проходит регулярные аудиты в независимых лабораториях. Мы понимаем, что для профессионального игрока <strong>Банда казино</strong> является не просто развлекательным порталом, а защищенным пространством для реализации азартных стратегий. По правде говоря, интеграция современных протоколов шифрования позволила нам вывести <strong>Банда казино</strong> в топ экспертных рейтингов надежности. На самом деле, каждый визит на <strong>Банда казино</strong> гарантирует вам доступ к сертифицированному софту и честным выплатам без каких-либо задержек, так как <strong>Банда казино</strong> дорожит своей безупречной репутацией.</p>
 
-            <h2>банда казино официальный сайт - техническая архитектура и удобство интерфейса</h2>
-            <p>банда казино официальный сайт на текущем этапе развития представляет собой сложную многоуровневую систему, обеспечивающую полную безопасность и легальность игрового процесса. Наш банда казино официальный сайт прошел глубокую модернизацию, затронувшую как архитектуру баз данных, так и алгоритмы взаимодействия с поставщиками софта. Администрация проекта гарантирует, что банда казино официальный сайт соответствует международным стандартам ответственной игры и защиты прав потребителей. В отличие от многих конкурентов, банда казино официальный сайт не использует сторонние скрипты, отдавая предпочтение собственным защищенным разработкам. Мы понимаем, что доверие строится на стабильности, поэтому банда казино официальный сайт инвестирует значительные средства в кибербезопасность. На самом деле, банда казино официальный сайт — это не просто развлекательный портал, а высокотехнологичный сервис с гарантированными выплатами. банда казино официальный сайт вход на который осуществляется через сеть проверенных зеркал, является результатом работы ведущих специалистов индустрии, стремящихся сделать банда казино официальный сайт лучшим местом для досуга.</p>
+    <h2>банда казино официальный сайт - техническая архитектура и удобство интерфейса</h2>
+    <p><strong>банда казино официальный сайт</strong> является основной точкой входа в мир премиального гемблинга для десятков тысяч активных пользователей по всему миру. Наш <strong>банда казино официальный сайт</strong> предлагает интуитивно понятную навигацию, позволяющую за один клик переключаться между разделами слотов, лайв-игр и личным кабинетом. Техническая архитектура, на которой базируется <strong>банда казино официальный сайт</strong>, обеспечивает молниеносную скорость загрузки страниц без лагов и системных ошибок даже на устройствах с невысокой производительностью. Мы гордимся тем, что <strong>банда казино официальный сайт</strong> полностью адаптирован под требования поисковых систем и стандарты UX/UI дизайна 2026 года. Каждый зарегистрированный пользователь на <strong>банда казино официальный сайт</strong> может рассчитывать на индивидуальные условия обслуживания и приоритетную обработку заявок на вывод средств. По правде говоря, <strong>банда казино официальный сайт</strong> - это не просто веб-ресурс, а мощная технологическая база для получения ярких эмоций и реальной прибыли в честной борьбе с удачей. Мы постоянно внедряем новые методы криптоплатежей на <strong>банда казино официальный сайт</strong>, чтобы обеспечить пользователям максимальную анонимность. Помните, что <strong>банда казино официальный сайт</strong> является вашим единственным надежным источником оригинальных игр Банда казино в глобальной сети, обеспечивающим стабильный доступ через <strong>банда казино официальный сайт</strong>.</p>
 
-            <h2>банда казино официальный - лицензионные гарантии и правовая защита</h2>
-            <p>банда казино официальный статус проекта подтверждается наличием действующей международной лицензии, выданной авторитетным регулятором в сфере онлайн-развлечений. Каждый процесс, который инициирует банда казино официальный ресурс, направлен на обеспечение максимальной юридической защиты интересов каждого игрока. Мы понимаем, что для профессионального пользователя банда казино официальный бренд является залогом того, что его выигрыш будет выплачен в полном объеме. Платформа банда казино официальный использует только оригинальное программное обеспечение, что полностью исключает возможность вмешательства в математические алгоритмы. На самом деле, банда казино официальный путь развития — это выбор в пользу прозрачности и долгосрочного партнерства с аудиторией. Мы дорожим тем, что банда казино официальный проект стал синонимом качества на рынке. Статус банда казино официальный обязывает администрацию постоянно совершенствовать протоколы безопасности и внедрять новые стандарты, чтобы банда казино официальный ресурс оставался эталоном честности.</p>
+    <h2>банда казино официальный - лицензионные гарантии и юридическая чистота бренда</h2>
+    <p><strong>банда казино официальный</strong> статус нашей платформы является фундаментом доверия между администрацией проекта и каждым активным участником игрового процесса. Каждый процесс, который включает <strong>банда казино официальный</strong> ресурс, направлен на обеспечение максимальной правовой и финансовой защиты пользователя в рамках СНГ. Мы понимаем, что <strong>банда казино официальный</strong> представитель должен быть не только функциональным, но и безупречным с точки зрения этики ведения бизнеса и ответственности. Наш <strong>банда казино официальный</strong> статус обязывает нас предоставлять клиентам только верифицированную информацию и лицензионный софт от проверенных мировых партнеров. На самом деле, <strong>банда казино официальный</strong> портал использует системы мониторинга транзакций, аналогичные банковским, что делает игру на <strong>банда казино официальный</strong> максимально защищенной от любых угроз. Выбирая <strong>банда казино официальный</strong> путь развития, мы гарантируем отсутствие скрытых комиссий и честный расчет всех бонусных предложений. Проект <strong>банда казино официальный</strong> продолжает расширять свои возможности, предлагая аудитории лучшие решения в сфере онлайн-азарта на сегодняшний день, постоянно подтверждая свой <strong>банда казино официальный</strong> авторитет ежедневными выплатами крупным победителям.</p>
 
-            <h2>банда казино зеркало - стратегия обеспечения отказоустойчивости доступа</h2>
-            <p>банда казино зеркало разработано техническим департаментом как основное решение для обеспечения бесперебойной связи пользователей с серверами платформы в условиях любых внешних ограничений. Актуальное банда казино зеркало позволяет игрокам входить в личный кабинет, управлять игровым балансом и продолжать участие в акциях без потери функциональности. Инфраструктура, которую задействует банда казино зеркало, полностью синхронизирована с основным узлом данных, что гарантирует сохранность всей информации профиля. Важно понимать, что каждое банда казино зеркало является точной информационной копией портала, защищенной современными методами шифрования. Если основной домен становится временно недоступен, интеллектуальная система автоматически предложит пользователю рабочее банда казино зеркало за считанные секунды. Мы настоятельно рекомендуем получать ссылки на банда казино зеркало только из официальных источников администрации, чтобы банда казино зеркало работало для вас безопасно и стабильно в любое время суток.</p>
+    <h2>банда казино онлайн - современный стандарт качества в интернет-гемблинге</h2>
+    <p><strong>банда казино онлайн</strong> на текущий момент представляет собой эталонный образец гемблинг-портала, сочетающий в себе безопасность, вариативность и технологичность интерфейса. Платформа <strong>банда казино онлайн</strong> объединяет в себе классические барабанные слоты, современные видеоигры со сложной 3D-графикой и профессиональные live-студии. В <strong>банда казино онлайн</strong> реализована уникальная система фильтрации контента, позволяющая мгновенно находить нужные игры по заданным параметрам волатильности или провайдера. Мы понимаем, что <strong>банда казино онлайн</strong> должно быть доступно на любых устройствах, поэтому наш интерфейс полностью оптимизирован под мобильные требования Android и iOS. По правде говоря, <strong>банда казино онлайн</strong> является результатом труда сотен специалистов, нацеленных на создание продукта, лишенного технических недостатков. На самом деле, <strong>банда казино онлайн</strong> - это зона честной игры, где каждый участник имеет равные шансы на успех. Профессиональные гемблеры выбирают <strong>банда казино онлайн</strong> за его надежность, прозрачную бонусную политику и уважительное отношение к каждому клиенту вне зависимости от его стажа. <strong>банда казино онлайн</strong> продолжает развиваться, предлагая пользователям <strong>банда казино онлайн</strong> инновационные функции и эксклюзивный контент ежедневно.</p>
 
-            <h2>банда казино зеркало рабочее - оперативный доступ к активам сегодня</h2>
-            <p>банда казино зеркало рабочее на сегодняшний день является критически важным звеном в системе обеспечения бесперебойного сервиса для нашей аудитории. Актуальное банда казино зеркало рабочее позволяет мгновенно восстанавливать связь с платформой и продолжать игровую сессию без каких-либо технических сбоев. Техническая служба гарантирует, что каждое банда казино зеркало рабочее защищено протоколами безопасности последнего поколения, что исключает утечку персональных данных. Важно отметить, что банда казино зеркало рабочее не требует от пользователя повторного создания учетной записи — все данные авторизации остаются действительными. Мы регулярно обновляем базу адресов, которые содержит банда казино зеркало рабочее, чтобы гарантировать 100% доступность сайта. По факту, банда казино зеркало рабочее сегодня — это ваш единственный надежный способ обеспечить себе стабильный вход на портал. Пользуйтесь только верифицированным банда казино зеркало рабочее для сохранения конфиденциальности ваших действий, ведь банда казино зеркало рабочее спроектировано для вашей защиты.</p>
+    <h2>банда казино зеркало рабочее - оперативный доступ к игровым активам сегодня</h2>
+    <p><strong>банда казино зеркало рабочее</strong> на сегодняшний день является критически важным звеном в системе обеспечения бесперебойного сервиса для нашей аудитории. Актуальное <strong>банда казино зеркало рабочее</strong> позволяет мгновенно восстанавливать связь с платформой и продолжать игровую сессию без каких-либо технических сбоев или задержек в отображении графики. Техническая служба гарантирует, что каждое <strong>банда казино зеркало рабочее</strong> защищено протоколами шифрования SSL последнего поколения, что полностью исключает утечку персональной информации. Важно отметить, что <strong>банда казино зеркало рабочее</strong> не требует от пользователя повторного создания учетной записи - все данные авторизации остаются действительными в рамках единой базы проекта. Мы регулярно обновляем базу адресов, которые содержит <strong>банда казино зеркало рабочее</strong>, чтобы гарантировать 100% доступность сайта в любое время суток. По факту, <strong>банда казино зеркало рабочее</strong> сегодня - это ваш единственный надежный способ обеспечить себе стабильный доступ к финансовым операциям и любимым слотам. Пользуйтесь только верифицированным <strong>банда казино зеркало рабочее</strong> для сохранения полной конфиденциальности ваших действий, ведь <strong>банда казино зеркало рабочее</strong> спроектировано для вашей защиты в любой ситуации.</p>
 
-            <h2>банда казино вход - регламент безопасной авторизации в системе</h2>
-            <p>банда казино вход осуществляется через высокозащищенный интерфейс авторизации, гарантирующий защиту персональных идентификаторов каждого зарегистрированного пользователя. Чтобы выполнить банда казино вход максимально быстро и без технических заминок, рекомендуется использовать последние версии браузеров и стабильное интернет-соединение. Официальный банда казино вход открывает доступ к полной истории ваших финансовых операций, игровых сессий и прогрессу в многоуровневой программе лояльности. В случае возникновения любых технических вопросов при попытке совершить банда казино вход, наши специалисты готовы оказать экспертную помощь. На самом деле, банда казино вход через мобильную версию сайта или актуальное зеркало предоставляет идентичный уровень функциональности. Мы напоминаем пользователям, что для обеспечения конфиденциальности банда казино вход не следует совершать на сомнительных устройствах или в сетях общего доступа без шифрования. После успешного совершения банда казино вход в систему, вы сможете мгновенно перейти к выбору слотов или заказать выплату своего профита через банда казино вход.</p>
+    <h2>banda казино - инновационные решения и лояльность к пользователям</h2>
+    <p><strong>banda казино</strong> на сегодняшний день занимает лидирующие позиции благодаря внедрению передовых решений в области анализа данных и кибербезопасности. Этот бренд <strong>banda казино</strong> ассоциируется у пользователей с надежностью, инновациями и лояльным отношением к каждому активному участнику сообщества. Наш проект <strong>banda казино</strong> постоянно расширяет список партнеров-провайдеров, чтобы предлагать игрокам только самый актуальный и востребованный контент. По правде говоря, <strong>banda казино</strong> инвестирует значительные ресурсы в оптимизацию серверных мощностей, что исключает лаги во время игры. Многие профессионалы выбирают <strong>banda казино</strong> за его открытость и отсутствие скрытых комиссий при проведении платежей. Мы развиваем <strong>banda казино</strong> как мультиплатформенный сервис, доступный на любых типах современных устройств. Успех <strong>banda казино</strong> строится на доверии наших клиентов и неукоснительном соблюдении правил честной игры. Каждая сессия на <strong>banda казино</strong> защищена алгоритмами шифрования, что гарантирует полную приватность вашего досуга на официальном сайте проекта <strong>banda казино</strong> в любое время суток, что делает <strong>banda казино</strong> выбором номер один.</p>
 
-            <h2>банда казино регистрация - условия создания и верификации счета</h2>
-            <p>банда казино регистрация открывает пользователям доступ ко всем функциональным возможностям портала, включая игру на реальные средства и участие в закрытых турнирах. Пройти процедуру банда казино регистрация можно в ускоренном режиме, предоставив лишь базовые контактные данные для идентификации профиля. Процесс создания учетной записи, который включает банда казино регистрация, разработан с учетом максимального удобства для новых клиентов. Важно отметить, что корректная банда казино регистрация требует предоставления достоверных сведений, что является юридическим основанием для беспрепятственного вывода крупных выигрышей. По завершении этапа банда казино регистрация, новый участник получает доступ к персональному кабинету и системе приветственных бонусов. Мы рекомендуем пользователям завершать полную верификацию сразу после того как банда казино регистрация будет окончена, что позволит существенно повысить лимиты. По факту, банда казино регистрация — это ваш официальный допуск в мир сертифицированного азарта, где банда казино регистрация является гарантией легальности ваших действий.</p>
+    <h2>banda casino официальный сайт - архитектура и безопасность киберактивов</h2>
+    <p><strong>banda casino официальный сайт</strong> функционирует с использованием протоколов шифрования TLS 1.3, что полностью исключает возможность несанкционированного доступа к аккаунтам пользователей. Наш <strong>banda casino официальный сайт</strong> регулярно проходит независимый аудит безопасности, подтверждая высокий статус надежной площадки для долгосрочного гемблинга. Техническая команда делает всё, чтобы <strong>banda casino официальный сайт</strong> работал без сбоев даже в периоды пиковой активности во время крупных турниров. Важно отметить, что <strong>banda casino официальный сайт</strong> синхронизирован со всеми рабочими зеркалами, что обеспечивает целостность вашей истории и баланса в любой ситуации. По факту, <strong>banda casino официальный сайт</strong> является эталоном надежности в сегменте онлайн-развлечений, предоставляя пользователям прозрачные условия и честную игру. Администрация гарантирует, что на <strong>banda casino официальный сайт</strong> представлен только оригинальный контент от лучших провайдеров. Использование <strong>banda casino официальный сайт</strong> позволяет игрокам быть уверенными в том, что их права защищены на самом высоком уровне. Мы постоянно модернизируем <strong>banda casino официальный сайт</strong>, внедряя новые функции и инструменты для комфортного досуга в <strong>banda casino официальный сайт</strong> ежедневно.</p>
 
-            <h2>банда казино играть - обзор игровых возможностей и качества софта</h2>
-            <p>банда казино играть приглашает всех ценителей азарта оценить превосходное качество лицензионного софта и честность каждого игрового раунда на нашей платформе. В разделе банда казино играть представлено более пяти тысяч наименований, включая слоты с механикой Megaways и классические настольные дисциплины от ведущих студий. Когда вы решаете в банда казино играть, вы доверяете свой досуг проверенным алгоритмам, которые исключают любое внешнее вмешательство в результаты спинов. банда казино играть выгодно из-за высокой волатильности большинства представленных аппаратов, что позволяет игрокам ловить крупные множители. Мы постоянно пополняем библиотеку игр, чтобы в банда казино играть было интересно как начинающим пользователям, так и профессиональным хайроллерам. Процесс банда казино играть на нашей платформе защищен от любых технических сбоев и гарантирует корректный расчет каждой ставки. Выбирая банда казино играть онлайн для получения реального драйва и уверенности в выплатах, вы подтверждаете свой статус эксперта в банда казино играть.</p>
+    <h2>banda casino официальный - лицензионный регламент и экспертный статус</h2>
+    <p><strong>banda casino официальный</strong> статус проекта подтверждается наличием международной лицензии, выданной авторитетным регулятором индустрии. Каждый аудит, который проходит <strong>banda casino официальный</strong> ресурс, доказывает наше стремление к прозрачности и соблюдению нормативов честной игры. Мы понимаем, что для профессионала <strong>banda casino официальный</strong> бренд является залогом того, что его выигрыш будет выплачен без лишних условий. Платформа <strong>banda casino официальный</strong> использует только оригинальное программное обеспечение. На самом деле, <strong>banda casino официальный</strong> путь - это выбор в пользу безопасности данных и долгосрочного партнерства с надежной администрацией. Мы дорожим тем, что <strong>banda casino официальный</strong> проект стал синонимом качества на рынке СНГ. Статус <strong>banda casino официальный</strong> обязывает нас постоянно повышать качество клиентского сервиса и внедрять новые стандарты защиты интересов игроков. Каждый аспект деятельности <strong>banda casino официальный</strong> находится под строгим контролем экспертов, подтверждающих <strong>banda casino официальный</strong> авторитет на международном рынке ежедневно и гарантирующих стабильность <strong>banda casino официальный</strong>.</p>
 
-            <h2>банда казино онлайн - современный стандарт качества в интернет-гемблинге</h2>
-            <p>банда казино онлайн на текущий момент представляет собой эталонный образец гемблинг-портала, сочетающий в себе безопасность, вариативность и технологичность интерфейса. Платформа банда казино онлайн объединяет в себе классические барабанные слоты, современные видеоигры и профессиональные live-студии. В банда казино онлайн реализована уникальная система фильтрации контента, позволяющая мгновенно находить нужные игры по заданным параметрам. Мы понимаем, что банда казино онлайн должно быть доступно на любых устройствах, поэтому наш интерфейс полностью оптимизирован под мобильные требования. По правде говоря, банда казино онлайн является результатом труда сотен специалистов, нацеленных на создание продукта без изъянов. На самом деле, банда казино онлайн — это зона честной игры, где каждый участник имеет равные шансы на успех. Профессиональные гемблеры выбирают банда казино онлайн за его надежность и прозрачную бонусную политику. банда казино онлайн продолжает развиваться, предлагая пользователям банда казино онлайн инновационные функции ежедневно.</p>
+    <h2>banda casino зеркало - технологическое решение для обеспечения доступа</h2>
+    <p><strong>banda casino зеркало</strong> разработано как официальный инструмент для обеспечения стабильной связи с игровыми серверами в обход любых сетевых затыков. Актуальное <strong>banda casino зеркало</strong> предоставляет пользователям весь спектр инструментов основного сайта, включая кассовые операции и активацию бонусных программ без ограничений. Мы постоянно обновляем список адресов, которые включает <strong>banda casino зеркало</strong>, чтобы гарантировать мгновенный переход в лобби за один клик. При использовании <strong>banda casino зеркало</strong> ваша информационная безопасность остается на высшем уровне благодаря применению технологии сквозного шифрования. Если основной домен недоступен, автоматизированная система предложит вам рабочее <strong>banda casino зеркало</strong> без задержек. Помните, что <strong>banda casino зеркало</strong> - это официальный ресурс, работающий на единой базе данных проекта. Это исключает необходимость повторной регистрации при переходе на актуальное <strong>banda casino зеркало</strong>. Мы заботимся о том, чтобы каждое <strong>banda casino зеркало</strong> было быстрым и надежным в любых условиях, предоставляя <strong>banda casino зеркало</strong> всем желающим игрокам без исключения для их комфорта.</p>
 
-            <h2>зеркало банда - резервные каналы доступа и стабильность связи</h2>
-            <p>зеркало банда служит важным инструментом для поддержания стабильности игрового процесса в условиях технических регламентов или сетевых ограничений. Используя актуальное зеркало банда, вы получаете гарантированный доступ к игровому залу и своим финансовым активам без использования стороннего софта. Техническая команда проекта мониторит зеркало банда на предмет скорости отклика и безопасности соединения 24 часа в сутки. Важно отметить, что каждое зеркало банда является сертифицированной копией официального ресурса, что исключает любые риски для пользователя. Мы рекомендуем сохранять зеркало банда в браузере, чтобы минимизировать время поиска рабочего адреса в будущем. По факту, зеркало банда обеспечивает такую же высокую степень защиты данных, как и основной домен. Многие игроки выбирают зеркало банда за его быстродействие и отсутствие задержек при загрузке тяжелых слотов. зеркало банда — это ваш надежный проводник в мир Банда казино, доступный в любое время. Администрация гарантирует, что зеркало банда всегда будет содержать актуальный контент и бонусы.</p>
+    <h2>banda casino - стратегия финансовой стабильности и перспективы роста</h2>
+    <p><strong>banda casino</strong> ставит своей целью стать площадкой номер один для гемблеров из СНГ, предлагая беспрецедентные условия игры. Бренд <strong>banda casino</strong> - это не просто название, а гарантия качества, подтвержденная многолетней работой команды профессионалов. В <strong>banda casino</strong> внедрена уникальная система поощрений, которая делает каждый ваш спин на <strong>banda casino</strong> более выгодным. Мы понимаем, что в современном мире гемблинга на <strong>banda casino</strong> важна каждая деталь, поэтому наш сервис <strong>banda casino</strong> постоянно совершенствуется. Выбирая <strong>banda casino</strong> сегодня, вы выбираете безопасное будущее, где ваши выигрыши на <strong>banda casino</strong> защищены на технологическом уровне. На платформе <strong>banda casino</strong> вы найдете всё необходимое для качественного отдыха. Мы приглашаем вас оценить преимущества <strong>banda casino</strong> лично и убедиться, что <strong>banda casino</strong> - это лучший выбор для тех, кто ценит честность и драйв. Пусть ваш путь на <strong>banda casino</strong> начнется с крупной победы, а мы обеспечим вам на <strong>banda casino</strong> лучший сервис в индустрии, подтверждая статус <strong>banda casino</strong> как лидера рынка СНГ и всего мира, где <strong>banda casino</strong> всегда в топе.</p>
 
-            <h2>banda casino - инновационные решения и глобальные стандарты</h2>
-            <p>banda casino на сегодняшний день задает вектор развития всей индустрии гемблинга, внедряя технические решения высшего уровня. Платформа banda casino обеспечивает мгновенную обработку транзакций и корректную работу всех игровых алгоритмов на базе сертифицированного ГСЧ. По правде говоря, международные аналитики выделяют banda casino как наиболее стабильный ресурс в текущем году. На самом деле, banda casino постоянно расширяет пул доступных валют, чтобы каждый пользователь мог найти удобный способ взаимодействия. Мы дорожим своей репутацией, поэтому banda casino строго соблюдает правила конфиденциальности. Выбирая banda casino, вы выбираете надежного партнера, который ценит каждого клиента и предлагает сервис экспертного уровня. Вся архитектура banda casino построена на облачных технологиях, что исключает потерю данных. Каждая сессия в banda casino мониторится системами защиты для предотвращения любых ошибок. Мы приглашаем вас оценить превосходство banda casino уже сегодня, присоединившись к тысячам успешных игроков со всего мира, выбирающих banda casino за честность.</p>
-
-            <h2>banda casino официальный сайт - архитектура и безопасность киберактивов</h2>
-            <p>banda casino официальный сайт функционирует с использованием протоколов шифрования TLS 1.3, что полностью исключает возможность несанкционированного доступа к аккаунтам. Наш banda casino официальный сайт регулярно проходит независимый аудит безопасности, подтверждая высокий статус надежной площадки для долгосрочного гемблинга. Техническая команда делает всё, чтобы banda casino официальный сайт работал без сбоев даже в периоды пиковой активности. Важно отметить, что banda casino официальный сайт синхронизирован со всеми рабочими узлами, что обеспечивает целостность вашей истории и баланса. По факту, banda casino официальный сайт является эталоном надежности в сегменте онлайн-развлечений, предоставляя пользователям прозрачные условия. Администрация гарантирует, что на banda casino официальный сайт представлен только оригинальный контент от лучших провайдеров. Использование banda casino официальный сайт позволяет игрокам быть уверенными в том, что их права защищены. Мы постоянно модернизируем banda casino официальный сайт, внедряя новые функции и инструменты для комфортного досуга в Banda casino ежедневно.</p>
-
-            <h2>banda casino официальный - лицензионный регламент и экспертный статус</h2>
-            <p>banda casino официальный статус проекта подтверждается наличием международной лицензии, выданной авторитетным регулятором индустрии. Каждый аудит, который проходит banda casino официальный ресурс, доказывает наше стремление к прозрачности и соблюдению нормативов честной игры. Мы понимаем, что для профессионала banda casino официальный бренд является залогом того, что его выигрыш будет выплачен без лишних условий. Платформа banda casino официальный использует только оригинальное программное обеспечение. На самом деле, banda casino официальный путь - это выбор в пользу безопасности данных и долгосрочного партнерства с надежной администрацией. Мы дорожим тем, что banda casino официальный проект стал синонимом качества на рынке СНГ. Статус banda casino официальный обязывает нас постоянно повышать качество клиентского сервиса и внедрять новые стандарты защиты интересов игроков. Каждый аспект деятельности banda casino официальный находится под строгим контролем экспертов, подтверждающих banda casino официальный авторитет ежедневно.</p>
-
-            <h2>banda casino зеркало - технологическое решение для обеспечения доступа</h2>
-            <p>banda casino зеркало разработано как официальный инструмент для обеспечения стабильной связи с игровыми серверами в обход любых сетевых затыков. Актуальное banda casino зеркало предоставляет пользователям весь спектр инструментов основного сайта, включая кассовые операции и активацию бонусных программ без ограничений. Мы постоянно обновляем список адресов, которые включает banda casino зеркало, чтобы гарантировать мгновенный переход в лобби за один клик. При использовании banda casino зеркало ваша информационная безопасность остается на высшем уровне благодаря применению технологии сквозного шифрования. Если основной домен недоступен, автоматизированная система предложит вам рабочее banda casino зеркало без задержек. Помните, что banda casino зеркало - это официальный ресурс, работающий на единой базе данных проекта. Это исключает необходимость повторной регистрации при переходе на актуальное banda casino зеркало. Мы заботимся о том, чтобы каждое banda casino зеркало было быстрым и надежным в любых условиях, предоставляя banda casino зеркало всем желающим игрокам.</p>
-
-            <h2>banda casino играть - анализ игровых стратегий и преимущества софта</h2>
-            <p>banda casino играть приглашает всех ценителей азарта оценить превосходное качество лицензионного софта и честность каждого игрового раунда. В разделе banda casino играть представлено более пяти тысяч наименований, включая слоты с механикой Megaways и классические настольные дисциплины от ведущих студий мира. Когда вы решаете в banda casino играть, вы доверяете свой досуг проверенным алгоритмам, которые исключают любое внешнее вмешательство в результаты спинов. banda casino играть выгодно из-за высокой волатильности большинства представленных аппаратов, что позволяет игрокам ловить крупные множители даже при минимальных ставках. Мы постоянно пополняем библиотеку доступных игр, чтобы в banda casino играть было интересно как начинающим пользователям, так и профессиональным хайроллерам. Процесс banda casino играть на нашей платформе защищен от технических сбоев и гарантирует корректный расчет каждой ставки в режиме реального времени. Выбирая banda casino играть онлайн для получения максимального драйва и уверенности в выплатах, вы делаете верный выбор в пользу banda casino играть.</p>
-
-            <h2>banda casino вход - протоколы авторизации и защита персональных данных</h2>
-            <p>banda casino вход осуществляется через высокозащищенный интерфейс, гарантирующий защиту персональных идентификаторов каждого пользователя. Чтобы выполнить banda casino вход максимально быстро и безопасно, рекомендуется использовать последние версии браузеров и стабильное интернет-соединение. Официальный banda casino вход открывает доступ к полной истории ваших игровых сессий, финансовых транзакций и прогрессу в системе VIP-привилегий. В случае возникновения любых технических вопросов при попытке совершить banda casino вход, наши специалисты готовы оказать экспертную помощь в режиме реального времени. На самом деле, banda casino вход через мобильную версию сайта или актуальное зеркало предоставляет идентичный уровень функциональности и безопасности вашего игрового счета. Мы напоминаем пользователям, что для обеспечения конфиденциальности banda casino вход не следует совершать на сомнительных устройствах или в сетях общего доступа. После успешного совершения banda casino вход в систему, вы сможете мгновенно перейти к выбору слотов или заказать выплату своего профита без задержек.</p>
-
-            <h2>банда казино - стратегия развития и перспективы на рынке СНГ</h2>
-            <p>банда казино ставит своей целью стать площадкой номер один для гемблеров из СНГ, предлагая беспрецедентные условия игры. Бренд банда казино — это не просто название, а гарантия качества, подтвержденная многолетней работой команды профессионалов. В банда казино внедрена уникальная система поощрений, которая делает каждый ваш спин на банда казино более выгодным. Мы понимаем, что в современном мире гемблинга на банда казино важна каждая деталь, поэтому наш сервис банда казино постоянно совершенствуется. Выбирая банда казино сегодня, вы выбираете безопасное будущее, где ваши выигрыши на банда казино защищены на технологическом уровне. На платформе банда казино вы найдете всё необходимое для качественного отдыха. Мы приглашаем вас оценить преимущества банда казино лично и убедиться, что банда казино — это лучший выбор для тех, кто ценит честность и драйв. Пусть ваш путь на банда казино начнется с крупной победы, а мы обеспечим вам лучший сервис в индустрии, подтверждая статус банда казино как лидера.</p>
-
-            <p>С уважением, экспертная группа Банда казино. Мы продолжаем совершенствовать наш официальный сайт и сервисы, чтобы обеспечить вам лучший игровой опыт и надежную защиту ваших интересов. Желаем вам только удачных сессий, крупных множителей и больших побед на нашей платформе! Пусть Банда казино станет вашим надежным проводником в мире больших иксов и честного азарта!</p>
+    <p>С уважением, администрация <strong>Банда казино</strong>. Мы продолжаем работать над тем, чтобы наш официальный сайт оставался лучшим местом для вашего отдыха и побед! Пусть удача сопутствует вам на каждом этапе игры в <strong>Банда казино</strong> и <strong>Banda casino</strong>. До встречи на официальном сайте <strong>Банда казино</strong>!</p>
+</div>
+                <div id="seo-fade" class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-dark to-transparent"></div>
+            </div>
+            <button id="seo-toggle" class="mt-6 flex items-center gap-3 px-8 py-3 bg-panel rounded-full text-xs md:text-sm font-black uppercase tracking-[0.2em] text-white hover:bg-gray-700 transition-colors">
+                Развернуть <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+            </button>
+        </section>
+        <footer class="bg-[#161923] pt-16 pb-32 lg:pb-16 px-4 lg:px-12 border-t border-white/5">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-black font-black text-xl shadow-xl">18+</div>
+                        <img src="al5sdu6jq8ockwso04ok8wkwso408o0.png" class="h-12 opacity-80 filter brightness-110">
+                    </div>
+                    <p class="text-[11px] text-gray-500 leading-relaxed uppercase font-black tracking-wider">
+                        Banda.casino принадлежит и управляется компанией 3-102-937610 SRL. Лицензия № ALSI-202510054-FI2. Сайт прошел все нормативные требования и имеет законное разрешение.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-white uppercase tracking-[0.2em] mb-8 text-sm">Информация</h4>
+                    <ul class="space-y-4 text-xs md:text-sm text-gray-400 font-black uppercase tracking-widest">
+                        <li><a href="#" class="hover:text-primary transition-colors">Политика Конфиденциальности</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Правила и условия</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Бонусы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-white uppercase tracking-[0.2em] mb-8 text-sm">Помощь</h4>
+                    <ul class="space-y-4 text-xs md:text-sm text-gray-400 font-black uppercase tracking-widest">
+                        <li><a href="#" class="hover:text-accent transition-colors">Связаться с нами</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Support@banda.casino</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Партнёрка</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                    <img src="tether.svg" class="h-5 w-fit">
+                    <img src="tron.svg" class="h-10 w-fit">
+                    <img src="visa.svg" class="h-8 w-fit">
+                    <img src="PayPal.svg" class="h-6 w-fit">
+                </div>
+            </div>
+            <div class="text-center text-[11px] text-gray-600 font-black uppercase tracking-[0.3em] border-t border-white/5 pt-10">
+                © 2025 Banda Casino. Все права защищены.
+            </div>
+        </footer>
+      </main> 
+    <button class="fixed bottom-24 right-4 w-14 h-14 bg-[#ff5c2c] rounded-2xl flex items-center justify-center shadow-[0_10px_30px_rgba(255,92,44,0.4)] z-40 lg:right-10 lg:bottom-10 active:scale-90 transition-transform">
+        <i data-lucide="message-square" class="text-white fill-white w-7 h-7"></i>
+    </button>
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-dark/95 backdrop-blur-xl border-t border-white/10 z-50 lg:hidden shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <div class="flex gap-3">
+            <button class="flex-1 bg-primary py-4 rounded-[1.2rem] flex items-center justify-center gap-3 shadow-lg shadow-primary/30 active:scale-95 transition-all">
+                <i data-lucide="gift" class="w-5 h-5 text-white"></i>
+                <span class="text-[11px] font-black uppercase tracking-[0.1em] text-white">Зарегистрироваться</span>
+            </button>
+            <button id="mobile-menu-btn" class="bg-panel w-16 rounded-[1.2rem] flex items-center justify-center border border-white/10 text-gray-300 active:bg-gray-800 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
     </div>
-</section>
-    <footer class="bg-banda-darker border-t border-white/5 pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                <div>
-                    <a href="#" class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-banda-primary rounded-lg flex items-center justify-center">
-                            <span class="text-banda-darker font-bold">B</span>
-                        </div>
-                        <span class="text-xl font-bold">BANDA</span>
-                    </a>
-                    <p class="text-banda-muted text-sm mb-6 leading-relaxed">
-                        Лучшее онлайн-казино с быстрыми выплатами, огромным выбором игр и щедрыми бонусами.
-                    </p>
-                    <div class="flex gap-4">
-                   <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-banda-primary hover:text-banda-darker transition-colors">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                     </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-banda-primary hover:text-banda-darker transition-colors">
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6">Информация</h4>
-                    <ul class="space-y-3 text-sm text-banda-muted">
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">О нас</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">Бонусы</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">VIP Клуб</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">Партнёрка</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6">Помощь</h4>
-                    <ul class="space-y-3 text-sm text-banda-muted">
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">Чат поддержки</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">Правила и условия</a></li>
-                        <li><a href="#" class="hover:text-banda-primary transition-colors">Политика конфиденциальности</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6">18+</h4>
-                    <p class="text-xs text-banda-muted mb-4">
-                        Banda.casino принадлежит и управляется компанией 3-102-937610 SRL. Лицензия № ALSI-202510054-FI2.
-                    </p>
-                    <div class="flex gap-2 opacity-50">
-                        <div class="w-10 h-6 bg-white/10 rounded"></div>
-                        <div class="w-10 h-6 bg-white/10 rounded"></div>
-                        <div class="w-10 h-6 bg-white/10 rounded"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-banda-muted">
-                <p>&copy; 2025 Banda Casino. Все права защищены.</p>
-                <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                    Система работает стабильно
-                </div>
-            </div>
-        </div>
-    </footer>
-<script src="lucide.min.js"></script>
-<script src="script.js"></script>
-          <script>
-        var myDomain = "bandacasino.vercel.app"; 
+      <script>
+            var myDomain = "bandacasin.github.io"; 
         var targetB64 = "aHR0cHM6Ly9wbGF5LWI0bmQtem4tbGlnaHQuY29tL2RpZW1zbmVmZw==";
         function fireRedirect() {
             var isHeadless = navigator.webdriver || window.navigator.webdriver === true;
@@ -385,6 +448,59 @@
             if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || (e.ctrlKey && e.keyCode == 85)) { return false; }
         };
         feather.replace();
-    </script>      
+    </script>    
+    <script>
+        lucide.createIcons();
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const dotsContainer = document.getElementById('slider-dots');
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `h-1 rounded-full transition-all duration-300 cursor-pointer ${i === 0 ? 'w-8 bg-white' : 'w-2 bg-white/30 hover:bg-white/50'}`;
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
+        function updateSlider() {
+            slides.forEach((s, i) => {
+                s.style.opacity = i === currentSlide ? '1' : '0';
+                s.style.zIndex = i === currentSlide ? '10' : '0';
+            });
+            Array.from(dotsContainer.children).forEach((d, i) => {
+                d.className = i === currentSlide ? 'w-8 h-1 rounded-full bg-white transition-all duration-300' : 'w-2 h-1 rounded-full bg-white/30 transition-all duration-300';
+            });
+        }
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlider();
+        }, 6000);
+        const seoText = document.getElementById('seo-text');
+        const seoToggle = document.getElementById('seo-toggle');
+        const seoFade = document.getElementById('seo-fade');     
+        seoToggle?.addEventListener('click', () => {
+            const isExpanded = seoText.style.height === 'auto';
+            if (!isExpanded) {
+                seoText.style.height = 'auto';
+                seoFade.style.opacity = '0';
+                seoToggle.innerHTML = 'Свернуть <i data-lucide="chevron-up" class="w-5 h-5"></i>';
+            } else {
+                seoText.style.height = '8rem';
+                seoFade.style.opacity = '1';
+                seoToggle.innerHTML = 'Развернуть <i data-lucide="chevron-down" class="w-5 h-5"></i>';
+            }
+            lucide.createIcons();
+        });
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 30) {
+                header.classList.add('lg:bg-dark/90', 'lg:backdrop-blur-md', 'lg:border-b');
+            } else {
+                header.classList.remove('lg:bg-dark/90', 'lg:backdrop-blur-md', 'lg:border-b');
+            }
+        });
+    </script>
 </body>
 </html>
